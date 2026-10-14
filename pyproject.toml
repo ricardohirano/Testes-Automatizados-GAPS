@@ -25,3 +25,11 @@ markers = [
     "integration: testes de integração",
     "e2e: testes end-to-end",
 ]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.0",
+]
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = ["fastapi.Depends", "fastapi.Form"]
